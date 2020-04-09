@@ -71,8 +71,8 @@ MongoClient.connect(uri, function(err, db) {
     var dbo = db.db("NodeJS");
     dbo.collection("users").find({}).toArray(function(err, result) {
       if (err) throw err;
-        //console.log(result);
-        users.push(result);
+        console.log(result);
+        users = result;
         db.close();
     });
 });
